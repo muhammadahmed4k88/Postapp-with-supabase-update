@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post App with Supabase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="postbody">
+    <h1>Create a Post</h1>
+
+  <form id="post-form">
+    <label for="title">Title:</label><br />
+    <input type="text" id="title" name="title" required /><br /><br />
+
+    <label for="content">Content:</label><br />
+    <textarea id="content" name="content" rows="5" required></textarea><br /><br />
+
+    <input type="file" id="imageInput"/>
+
+
+
+
+    <button type="submit">Submit Post</button>
+  </form>
+   <div id="logout-container">
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <p id="status"></p>
+
+  <h2>All Posts</h2>
+  <div id="card"></div>
+
+  <!-- Toast Container -->
+<div id="toast-container"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
